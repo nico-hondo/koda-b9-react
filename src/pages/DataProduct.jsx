@@ -8,27 +8,29 @@ function DataProduct(){
     }
     return(
         <>
-            <ViewData sentData={data}/>
-            <SetTableData updateData={addToArray} />
+            <main className='w-full min-h-90 flex flex-col gap-5 items-center'>
+                <ViewData sentData={data}/>
+                <SetTableData updateData={addToArray} />
+            </main>
         </>
     )
 }
 
 function ViewData({ sentData }){
     return(
-        <table>
-            <thead>
+        <table className="border">
+            <thead className="border">
                 <tr>
-                    <th>No.</th>
-                    <th>Username</th>
+                    <th className="border p-3">No.</th>
+                    <th className='p-3'>Username</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="border">
                 {sentData.map((val, idx) => {
                     return(
                         <tr>
-                            <td>{idx+1}</td>
-                            <td>{val}</td>
+                            <td className="border p-3">{idx+1}</td>
+                            <td className="border p-3">{val}</td>
                         </tr>
                     )
                 })}
@@ -48,9 +50,9 @@ function SetTableData({updateData}){
 
     return(
         <>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="username" value={input} onChange={(e) => setInput(e.target.value)} placeholder='Masukkan Username'/>
-                <button type='submit'>Tambah</button>
+            <form onSubmit={handleSubmit} className="flex gap-5">
+                <input type="text" name="username" value={input} onChange={(e) => setInput(e.target.value)} placeholder='Masukkan Username' className="border border-gray-200 rounded-lg p-3"/>
+                <button type='submit' className="bg-black px-5 py-2 rounded-lg text-white">Tambah</button>
             </form>
         </>
     )

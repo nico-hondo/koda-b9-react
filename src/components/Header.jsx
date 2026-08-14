@@ -11,6 +11,7 @@ function Header(){
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/aritmatika"}>Aritmatika</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/product"}>Product</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/pokemon"}>Pokemon</Link></li>
+                        <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Profile</Link></li>
                     </ul>
                 </nav>
             </header>

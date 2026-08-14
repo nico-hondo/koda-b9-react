@@ -1,6 +1,12 @@
 import { useState } from "react";
 import Review from "../components/Review";
 
+/**
+ * 
+ * @typedef {Object} ReviewProps
+ * @property
+ */
+
 function Home(){
     const [review, setReview] = useState(JSON.parse(localStorage.getItem('ulasan')) || []);
 

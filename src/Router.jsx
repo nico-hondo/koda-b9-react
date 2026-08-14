@@ -4,14 +4,23 @@ import Home from "./pages/Home.jsx";
 import OperationArith from "./pages/OperationArith.jsx";
 import DataProduct from "./pages/DataProduct.jsx";
 import DataPokemon from "./pages/DataPokemon.jsx";
+import Profile from "./pages/Profile.jsx";
+import DetailPokemon from "./pages/DetailPokemon.jsx";
 
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/aritmatika" element={<OperationArith/>} />
-      <Route path="/product" element={<DataProduct/>} />
-      <Route path="/pokemon" element={<DataPokemon />} />
+      <Route path="/">
+        <Route index element={<Home />}/>
+        <Route path="aritmatika" element={<OperationArith/>} />
+        <Route path="product" element={<DataProduct/>} />
+        <Route path="pokemon">
+          <Route index element={<DataPokemon/>}/>
+          <Route path=":id/:slug" element={<DetailPokemon/>}/>
+       </Route>
+        <Route path="profile" element={<Profile/>} />
+      </Route>
+      
     </Routes>
   );
 }

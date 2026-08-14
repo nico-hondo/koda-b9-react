@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {Dispatch<Set>} props 
+ * @returns 
+ */
+
 function Review({getReview}){
     return(
         <section className="w-full flex-1 flex justify-center items-center">
