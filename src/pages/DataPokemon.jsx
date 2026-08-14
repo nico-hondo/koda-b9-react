@@ -36,11 +36,12 @@ function DataPokemon(){
         <>
             <section className="flex flex-col gap-5 ml-5 justify-center items-center text-center">
                 <h2 className="text-2xl font-bold">Data Pokemon</h2>
-                <div className="flex justify-center items-center">
-                    <form className="flex gap-4" onSubmit={handleSubmit}>
-                        <input type="text" name="name" value={search} id="name" className="border border-solid border-gray-400 rounded-md pl-3" placeholder="Find by Name" onChange={(e) => setSearch(e.target.value)}/>
+                <div className="w-full flex justify-center items-center">
+                    <form className="grid grid-cols-4 grid-row-2 gap-4" onSubmit={handleSubmit}>
+                        <input type="text" name="name" value={search} id="name" className="col-span-3 border border-solid border-gray-400 rounded-md pl-3" placeholder="Find by Name" onChange={(e) => setSearch(e.target.value)}/>
 
-                        <button type="submit" className="border bg-black text-gray-300 rounded-lg p-3 hover:bg-gray-600 cursor-pointer">Cari by Nama</button>
+                        <button type="submit" className="col-span-1 border bg-black text-gray-300 rounded-lg p-3 hover:bg-gray-600 cursor-pointer">Cari by Nama</button>
+
                     </form>
                 </div>
                 <div className="w-full grid grid-cols-4 gap-4">

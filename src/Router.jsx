@@ -6,6 +6,7 @@ import DataProduct from "./pages/DataProduct.jsx";
 import DataPokemon from "./pages/DataPokemon.jsx";
 import Profile from "./pages/Profile.jsx";
 import DetailPokemon from "./pages/DetailPokemon.jsx";
+import DataPokemonSP from "./pages//DataPokemonSP.jsx";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
           <Route index element={<DataPokemon/>}/>
           <Route path=":id/:slug" element={<DetailPokemon/>}/>
        </Route>
+       <Route path="pokemonSP" element={<DataPokemonSP/>}/>
         <Route path="profile" element={<Profile/>} />
       </Route>
       
