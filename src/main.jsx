@@ -6,13 +6,19 @@ import './index.css'
 import Router from './Router';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ThemeProvider from "./components/ThemeProvider.jsx";
+import UserProvider from './context/user/UserProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Header/>
-      <Router/>
-      <Footer/>
-    </BrowserRouter>
+    <ThemeProvider>
+      <UserProvider>
+        <BrowserRouter>
+          <Header/>
+          <Router/>
+          <Footer/>
+        </BrowserRouter>
+      </UserProvider>
+    </ThemeProvider>
   </StrictMode>,
 )

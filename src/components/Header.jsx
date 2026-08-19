@@ -1,6 +1,14 @@
 import { Link } from "react-router";
+import {useContext} from "react";
+import UserContext from "../context/user/context.js";
+// import { useNavigate } from 'react-router';
+
 
 function Header(){
+    const {state} = useContext(UserContext);
+
+    const data = state.login;
+    console.log(data);
     return(
         <>
          <header className="flex justify-between items-center px-12 py-6 sticky top-0 z-50 bg-gray-100 border-b-2 border-gray-200 mb-15">
@@ -12,7 +20,10 @@ function Header(){
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/product"}>Product</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/pokemon"}>Pokemon</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/pokemonSP"}>PokemonSP</Link></li>
-                        <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Profile</Link></li>
+                        {/* <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Login</Link></li> */}
+                        {data === "" ? (<li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Login</Link></li>) 
+                        : (<li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile/detail"}>{data}</Link></li>)}
+                        
                     </ul>
                 </nav>
             </header>
