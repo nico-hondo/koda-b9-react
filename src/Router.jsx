@@ -11,6 +11,8 @@ import DataPokemonCH from "./pages/DataPokemonCustomeHooks.jsx";
 
 import DetailUser from "./pages/User.jsx";
 
+import SurveyPenonton from "./pages/SurveyPenonton.jsx";
+
 function Router() {
   return (
       <Routes>
@@ -28,6 +30,7 @@ function Router() {
           <Route index element={<Profile/>}/>
           <Route path="detail" element={<DetailUser/>}/>
         </Route>
+        <Route path="survey" element={<SurveyPenonton />}/>
         </Route>
       </Routes>
   );
