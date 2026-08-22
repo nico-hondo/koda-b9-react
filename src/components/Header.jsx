@@ -21,7 +21,8 @@ function Header(){
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/pokemon"}>Pokemon</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/pokemonSP"}>PokemonSP</Link></li>
                         <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/survey"}>Survey</Link></li>
-                        {/* <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Login</Link></li> */}
+                        <li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/to-do-list"}>Todo List</Link></li>
+
                         {data === "" ? (<li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile"}>Login</Link></li>) 
                         : (<li className="px-4 py-2 text-center cursor-pointer hover:bg-gray-300 rounded-lg font-medium"><Link to={"/profile/detail"}>{data}</Link></li>)}
                         

@@ -13,6 +13,8 @@ import DetailUser from "./pages/User.jsx";
 
 import SurveyPenonton from "./pages/SurveyPenonton.jsx";
 
+import ToDoList from "./pages/ToDoList.jsx";
+
 function Router() {
   return (
       <Routes>
@@ -23,14 +25,15 @@ function Router() {
           <Route path="pokemon">
             <Route index element={<DataPokemon/>}/>
             <Route path=":id/:slug" element={<DetailPokemon/>}/>
-        </Route>
-        <Route path="PokemonCH" element={<DataPokemonCH/>}/>
-        <Route path="pokemonSP" element={<DataPokemonSP/>}/>
-        <Route path="profile" >
-          <Route index element={<Profile/>}/>
-          <Route path="detail" element={<DetailUser/>}/>
-        </Route>
-        <Route path="survey" element={<SurveyPenonton />}/>
+          </Route>
+          <Route path="PokemonCH" element={<DataPokemonCH/>}/>
+          <Route path="pokemonSP" element={<DataPokemonSP/>}/>
+          <Route path="profile" >
+            <Route index element={<Profile/>}/>
+            <Route path="detail" element={<DetailUser/>}/>
+          </Route>
+          <Route path="survey" element={<SurveyPenonton />}/>
+          <Route path="to-do-list" element={<ToDoList/>}/>
         </Route>
       </Routes>
   );
